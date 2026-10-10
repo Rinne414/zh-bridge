@@ -1,0 +1,27 @@
+{
+  "name": "zh-bridge",
+  "version": "0.2.0",
+  "description": "Type in Chinese, talk to the model in English: translates prompts and replies with local Ollama, falling back to Google Translate",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "ollamaUrl": {
+      "type": "string",
+      "title": "Ollama URL",
+      "description": "Base URL of the local Ollama server",
+      "default": "http://127.0.0.1:11434"
+    },
+    "ollamaModel": {
+      "type": "string",
+      "title": "Ollama model",
+      "description": "Local model used for translation; Google Translate is used when it fails",
+      "default": "qwen3.8-original:latest"
+    },
+    "targetLanguage": {
+      "type": "string",
+      "title": "Reply language",
+      "description": "Language replies are shown in",
+      "options": ["zh-TW", "zh-CN"],
+      "default": "zh-TW"
+    }
+  }
+}
